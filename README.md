@@ -11,7 +11,6 @@ This is a repository for a FullStack Twitter clone tutorial using React, NextJS,
 
 
 
-### Prerequisites
 
 **Node version 14.x**
 
