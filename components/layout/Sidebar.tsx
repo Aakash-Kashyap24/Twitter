@@ -13,26 +13,26 @@ import { signOut } from 'next-auth/react';
 const Sidebar = () => {
 const {data:currentUser}=useCurrentUser();
 
+console.log(currentUser?.hasNotification);
     const items = [
-        {
-            icon: BsHouseFill,
-            label: 'Home',
-            href: '/',
-        },
-        {
-            icon: BsBellFill,
-            label: 'Notifications',
-            href: '/notifications',
-            auth: true,
-            // alert: currentUser?.hasNotification
-        },
-        {
-            icon: FaUser,
-            label: 'Profile',
-            href: `/user/${currentUser?.id}`,
-            // href: `/users/${currentUser?.id}`,
-            auth: true,
-        },
+      {
+        icon: BsHouseFill,
+        label: "Home",
+        href: "/",
+      },
+      {
+        icon: BsBellFill,
+        label: "Notifications",
+        href: "/notifications",
+        auth: true,
+        alert: currentUser?.hasNotification,
+      },
+      {
+        icon: FaUser,
+        label: "Profile",
+        href: `/user/${currentUser?.id}`,
+        auth: true,
+      },
     ];
 
     return (
@@ -47,6 +47,7 @@ const {data:currentUser}=useCurrentUser();
                             label={item.label}
                             icon={item.icon}
                             auth={item?.auth}
+                            alert={item?.alert}
                         />
                     ))}
                     {
@@ -55,6 +56,8 @@ const {data:currentUser}=useCurrentUser();
                             onClick={()=>signOut()}
                             icon={BiLogOut}
                             label='Logout'
+                          
+
                             />
 
                         )

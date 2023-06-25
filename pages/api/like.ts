@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 if (post?.userId) {
                     await prisma.notification.create({
                         data: {
-                            body: 'Someone liked your tweet!',
+                            body: `${currentUser.username} liked your tweet!`,
                             userId: post.userId
                         }
                     });
@@ -80,9 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (req.method === 'DELETE') {
             const { postId } = req.query;
 
-            // let postId=data?.postId;
-            // console.log(data)
-            console.log(postId);
+          
             const { currentUser } = await serverAuth(req, res);
 
             if (!postId || typeof postId !== 'string') {

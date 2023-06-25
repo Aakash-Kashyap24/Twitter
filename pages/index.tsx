@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-      <Header label="Home" showBackArrow />
+      <Header label="Home"  />
       <Form placeholder="What's Happening? " />
       <PostFeed/>
     </>

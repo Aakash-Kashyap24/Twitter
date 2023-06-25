@@ -10,6 +10,7 @@ import usePosts from "@/hooks/usePosts";
 
 import Avatar from "./Avatar";
 import Button from "./Button";
+import usePost from "@/hooks/usePost";
 
 interface FormProps {
   placeholder: string;
@@ -23,7 +24,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
 
   const { data: currentUser } = useCurrentUser();
   const { mutate: mutatePosts } = usePosts();
-  // const { mutate: mutatePost } = usePost(postId as string);
+  const { mutate: mutatePost } = usePost(postId as string);
 
   const [body, setBody] = useState("");
   const [isLoading, setIsLoading] = useState(false);

@@ -17,7 +17,6 @@ const UserView=()=>{
   
     const {data:fetchedUser,isLoading,error}=useUser(userIds as string);
 
-    console.log('data',fetchedUser)
 
     if (isLoading||!fetchedUser&&!error) {
         return (

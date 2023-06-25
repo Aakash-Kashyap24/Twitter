@@ -17,6 +17,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
   const { data: currentUser } = useCurrentUser();
   const { data: fetchedUser } = useUser(userId);
 
+  console.log(fetchedUser?.followersCount)
   const editModal = useEditModal();
 
   const { isFollowing, toggleFollow } = useFollow(userId);
@@ -73,7 +74,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
             <p className="text-neutral-500">Following</p>
           </div>
           <div className="flex flex-row items-center gap-1">
-            <p className="text-white">{fetchedUser?.user?.followersCount || 0}</p>
+            <p className="text-white">{fetchedUser?.followersCount || 0}</p>
             <p className="text-neutral-500">Followers</p>
           </div>
         </div>
