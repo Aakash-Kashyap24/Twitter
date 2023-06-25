@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-# Build and Deploy: TWITTER clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel (2023)
+# TWITTER clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel (2023)
 
 ![Screenshot_select-area_20230625201333](https://github.com/Aakash-Kashyap24/Twitter/assets/110857134/3d895673-5541-4f7f-af44-865ba67ecbdd)
 
