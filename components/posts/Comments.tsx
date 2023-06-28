@@ -1,4 +1,5 @@
-import CommentItem from "./CommentItem.tsx";
+import CommentItem from "./CommentItem";
+
 
 interface CommentFeedProps {
   comments?: Record<string, any>[];
