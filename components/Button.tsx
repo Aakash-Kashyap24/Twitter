@@ -3,7 +3,7 @@ import React from 'react'
 interface ButtonProps {
   label: string;
   secondary?: boolean;
-  fullWidth?: boolean;
+  fullwidth?: boolean;
   large?: boolean;
   onClick: () => void;
   disabled?: boolean;
@@ -15,7 +15,7 @@ const Button:React.FC<ButtonProps> = ({
     outline,
     disabled,
     large,
-    fullWidth,
+    fullwidth,
     onClick
 }) => {
   return (
