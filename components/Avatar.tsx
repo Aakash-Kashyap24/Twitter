@@ -7,6 +7,7 @@ interface AvatarProps{
 }
 
 import useUser from '@/hooks/useUser';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react'
 
@@ -43,7 +44,7 @@ overflow-hidden
 `}
     >
 
-<img onClick={onClick} src={fetchUser?.user?.profileImage|| '/images/placeholder.png'} alt="avatar" style={{objectFit:'cover',borderRadius:"100%"}} />
+<Image onClick={onClick} src={fetchUser?.user?.profileImage|| '/images/placeholder.png'} alt="avatar" style={{objectFit:'cover',borderRadius:"100%"}} />
 
     </div>
   );

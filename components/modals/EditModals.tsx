@@ -43,14 +43,14 @@ useEffect(() => {
     try {
       setIsLoading(true);
 
-      await axios.patch('/api/edit',{
+      await axios.patch("/api/edit", {
         name,
         email,
         bio,
         profileImage,
         coverImage,
-        username
-      })
+        username,
+      });
       mutateFetchedUser();
 
       toast.success("Updated At");
@@ -61,7 +61,16 @@ useEffect(() => {
     } finally {
       setIsLoading(false);
     }
-  }, [email, bio,name,username,profileImage,coverImage, editModal]);
+  }, [
+    email,
+    bio,
+    name,
+    username,
+    mutateFetchedUser,
+    profileImage,
+    coverImage,
+    editModal,
+  ]);
 
   const onToggle = useCallback(() => {
     editModal.onClose();
