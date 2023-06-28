@@ -15,7 +15,7 @@ const Button:React.FC<ButtonProps> = ({
     outline,
     disabled,
     large,
-    fullwidth,
+    fullWidth,
     onClick
 }) => {
   return (
