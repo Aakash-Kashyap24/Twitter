@@ -69,7 +69,7 @@ const RegisterModal = () => {
         onChange={(e) => setName(e.target.value)}
       />
       <Input
-       
+       type="text"
         disabled={isLoading}
         placeholder="Username"
         value={username}
