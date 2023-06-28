@@ -3,18 +3,18 @@ import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
 import useRegisterModal from "@/hooks/useRegisterModal";
 
-interface ModelProps {
-  isOpen: boolean;
+
+interface ModalProps {
+  isOpen?: boolean;
   onClose: () => void;
   onSubmit: () => void;
-  title: string;
-  body: React.ReactElement;
-  footer: React.ReactElement;
+  title?: string;
+  body?: React.ReactElement;
+  footer?: React.ReactElement;
   actionLabel: string;
-  disabled: boolean;
+  disabled?: boolean;
 }
-
-const Modal: React.FC<ModelProps> = ({
+const Modal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
   onSubmit,

@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface ButtonProps{
-    label:string,
-    secondary?:boolean,
-    fullwidth?:boolean,
-    large?:boolean,
-    onClick:()=>void;
-    disabled?:boolean,
-    outline?:boolean
+interface ButtonProps {
+  label: string;
+  secondary?: boolean;
+  fullWidth?: boolean;
+  large?: boolean;
+  onClick: () => void;
+  disabled?: boolean;
+  outline?: boolean;
 }
 const Button:React.FC<ButtonProps> = ({
     label,
