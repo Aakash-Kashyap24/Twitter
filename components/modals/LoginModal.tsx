@@ -45,7 +45,7 @@ const LoginModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Input
-      te
+      type="email"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
