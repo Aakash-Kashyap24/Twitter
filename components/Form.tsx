@@ -89,6 +89,10 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
                 disabled={isLoading || !body}
                 onClick={onSubmit}
                 label="Tweet"
+                secondary={false}
+                fullwidth={false}
+                large={false}
+                outline={false}
               />
             </div>
           </div>
