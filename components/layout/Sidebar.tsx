@@ -11,9 +11,9 @@ import { signOut } from 'next-auth/react';
 
 
 const Sidebar = () => {
-const {data:currentUser}=useCurrentUser();
+const {data:currentUser,isLoading}=useCurrentUser();
 
-console.log(currentUser?.hasNotification);
+console.log("currentUser",currentUser);
     const items = [
       {
         icon: BsHouseFill,
@@ -35,6 +35,10 @@ console.log(currentUser?.hasNotification);
       },
     ];
 
+    if (isLoading) {
+        return <>...loading</>
+    }
+
     return (
         <div className="col-span-1 h-full pr-4 md:pr-6">
             <div className="flex flex-col items-end">
@@ -51,7 +55,7 @@ console.log(currentUser?.hasNotification);
                         />
                     ))}
                     {
-                        currentUser &&(
+                        currentUser?.id &&(
                             <SidebarItem
                             onClick={()=>signOut()}
                             icon={BiLogOut}

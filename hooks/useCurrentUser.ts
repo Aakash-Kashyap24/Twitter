@@ -1,16 +1,15 @@
-import fetcher from '@/libs/fetcher';
-import useSwr from 'swr';
+import fetcher from "@/libs/fetcher";
+import useSwr from "swr";
 
-const useCurrentUser=()=>{
-    const {data,error,isLoading,mutate}=useSwr('/api/current',fetcher)
-return{
+const useCurrentUser = () => {
+  const { data, error, isLoading, mutate } = useSwr("/api/current", fetcher);
+  console.log('users',data,error,isLoading)
+  return {
     data,
     error,
     isLoading,
-    mutate
-}
-
-}
+    mutate,
+  };
+};
 
 export default useCurrentUser;
-
