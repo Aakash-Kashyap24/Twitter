@@ -1,12 +1,5 @@
 {
-    "build": {
-      
-      "commands": [
-        "npm install",
-        "prisma generate",
-        "npm run build"
-      ]
-    }
-   
+  "build": {
+    "postinstall": "npm run build && prisma generate"
   }
-  
+}
