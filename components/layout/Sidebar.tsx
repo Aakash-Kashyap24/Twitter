@@ -7,6 +7,7 @@ import {BiLogOut} from 'react-icons/bi';
 import SidebarTweetButton from './SidebarTweetButton';
 import useCurrentUser from '@/hooks/useCurrentUser';
 import { signOut } from 'next-auth/react';
+import { ClipLoader } from 'react-spinners';
 
 
 
@@ -34,8 +35,14 @@ const {data:currentUser,isLoading}=useCurrentUser();
       },
     ];
 
+ 
     if (isLoading) {
-        return <>...loading</>
+        return (
+
+            <div className="flex justify-center items-center h-full">
+                <ClipLoader color="lightblue" size={80}  />
+            </div>
+        )
     }
 
     return (
