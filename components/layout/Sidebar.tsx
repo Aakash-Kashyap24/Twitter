@@ -36,14 +36,7 @@ const {data:currentUser,isLoading}=useCurrentUser();
     ];
 
  
-    if (isLoading) {
-        return (
-
-            <div className="flex justify-center items-center h-full">
-                <ClipLoader color="lightblue" size={80}  />
-            </div>
-        )
-    }
+    
 
     return (
         <div className="col-span-1 h-full pr-4 md:pr-6">
