@@ -1,5 +1,0 @@
-{
-  "build": {
-    "postinstall": "npm run build && prisma generate"
-  }
-}
