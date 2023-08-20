@@ -28,7 +28,6 @@ const router=useRouter();
       </div>
     );
   }
-console.log(fetchedNotifications)
   return (
     <div className="flex flex-col">
       {fetchedNotifications?.notifications?.map(

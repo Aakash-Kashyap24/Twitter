@@ -62,7 +62,6 @@ export default async function handler(
                 }
 
             } catch (error) {
-                console.log(error)
                 return res.status(400).end();
             }
 
@@ -132,7 +131,6 @@ const user = await prisma.user.findUnique({
             return res.status(200).json({ updateUser, followersCount });
         }
     } catch (error) {
-        console.log(error);
         return res.status(400).end();
     }
 }

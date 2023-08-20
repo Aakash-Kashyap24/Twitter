@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Form from "@/components/Form";
 import PostItem from "@/components/posts/PostItem";
 import Comments from "@/components/posts/Comments";
+import Head from "next/head";
 // import CommentFeed from "@/components/posts/CommentFeed";
 
 const PostView = () => {
@@ -25,6 +26,9 @@ const PostView = () => {
 
   return (
     <>
+     <Head>
+        <title>{fetchedPost?.user?.name || 'Loading...'}</title>
+      </Head>
       <Header showBackArrow label="Tweet" />
       <PostItem data={fetchedPost} />
       <Form

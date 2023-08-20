@@ -25,7 +25,7 @@ const Avatar: React.FC<AvatarProps> = ({ userIds, isLarge, hasBorder }) => {
     },
     [router, userIds]
   );
-console.log("prof",fetchedUser)
+
   return (
     <div
       className={`

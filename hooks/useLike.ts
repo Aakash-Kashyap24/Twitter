@@ -21,7 +21,6 @@ const useLike = ({ postId, userId }: { postId: string, userId?: string }) => {
     }, [fetchedPost, currentUser]);
 
     const toggleLike = useCallback(async () => {
-        console.log('post',postId)
         if (!currentUser) {
             return loginModal.onOpen();
         }
@@ -30,7 +29,6 @@ const useLike = ({ postId, userId }: { postId: string, userId?: string }) => {
             let request;
 
             if (hasLiked) {
-                console.log("yyy", postId, typeof postId);
                 // request = () => axios.delete('/api/like', { data: { postId } });
                 // Modify the delete request to include the user ID
                 request = () => axios.delete(`/api/like?postId=${postId}&userId?=${userId}`);

@@ -25,7 +25,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
 }) => {
   const router = useRouter();
   const loginModal = useLoginModal();
-console.log(alert)
+
   const { data: currentUser } = useCurrentUser();
 
   const handleClick = useCallback(() => {

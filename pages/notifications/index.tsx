@@ -4,6 +4,7 @@ import NotificationsFeed from "@/components/notifications/NotificationsFeed";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -23,6 +24,9 @@ const Notifications = () => {
 
   return (
     <>
+     <Head>
+        <title>Notifications</title>
+      </Head>
       <Header showBackArrow label="Notifications" />
       <NotificationsFeed />
     </>

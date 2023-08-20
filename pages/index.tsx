@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Form from '@/components/Form'
 import PostFeed from '@/components/posts/PostFeed'
+import Head from 'next/head';
 import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,12 +13,17 @@ export const metadata: Metadata = {
   description: 'This is Twitter clone ',
 }
 
+
 export default function Home() {
   return (
     <>
-      <Header label="Home"  />
-      <Form placeholder="What's Happening? " />
-      <PostFeed/>
+      <Head>
+        <title>Twitter</title>
+        {/* Other metadata */}
+      </Head>
+      <Header label="Home" />
+      <Form placeholder="What's Happening?" />
+      <PostFeed />
     </>
   );
 }

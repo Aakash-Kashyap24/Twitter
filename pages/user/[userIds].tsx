@@ -3,6 +3,7 @@ import PostFeed from "@/components/posts/PostFeed";
 import UserBio from "@/components/users/UserBio";
 import UserHero from "@/components/users/UserHero";
 import useUser from "@/hooks/useUser";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import {ClipLoader} from 'react-spinners';
 
@@ -29,6 +30,9 @@ const UserView=()=>{
 
     return(
         <>
+         <Head>
+        <title>{fetchedUser?.user?.name || 'Loading...'}</title>
+      </Head>
         <Header label={fetchedUser?.user?.name} showBackArrow/>
         <UserHero userIds={userIds as string}/>
         <UserBio userId={userIds as string} />

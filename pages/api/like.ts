@@ -14,7 +14,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const { postId } = req.body;
 
-        console.log(postId);
         const { currentUser } = await serverAuth(req, res);
 
         if (!postId || typeof postId !== 'string') {
@@ -61,7 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     });
                 }
             } catch (error) {
-                console.log(error);
+                return (error)
             }
 
             const updatedPost = await prisma.post.update({
@@ -114,7 +113,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     } catch (error) {
-        console.log(error);
         return res.status(400).end();
     }
 }

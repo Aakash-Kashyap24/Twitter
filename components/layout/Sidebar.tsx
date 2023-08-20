@@ -13,7 +13,6 @@ import { signOut } from 'next-auth/react';
 const Sidebar = () => {
 const {data:currentUser,isLoading}=useCurrentUser();
 
-console.log("currentUser",currentUser);
     const items = [
       {
         icon: BsHouseFill,
@@ -66,7 +65,7 @@ console.log("currentUser",currentUser);
 
                         )
                     }
-                    <SidebarTweetButton   />
+                    {/* <SidebarTweetButton   /> */}
                 </div>
             </div>
         </div>
