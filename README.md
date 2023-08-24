@@ -3,6 +3,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 # TWITTER clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel (2023)
 
+https://github.com/Aakash-Kashyap24/Twitter/assets/110857134/5988b423-7a8e-4a1a-910e-460685b018a8
+
+
+
+
 ![Screenshot_select-area_20230625201333](https://github.com/Aakash-Kashyap24/Twitter/assets/110857134/f7530315-4498-4054-9c3c-f6eaf0c5f8c4)
 
 
